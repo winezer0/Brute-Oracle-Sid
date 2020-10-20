@@ -23,16 +23,17 @@ def getFileType(file_path):
 def Usage():
 	print('''
 	####################################################################
-	#                                                                                                                      #
-	#                      Oracle Default User and Password Sc4nner                   #
-	#                                                  By : Gavin                                                  #
-	#                                     reBuild by WINZERO                                            #
+	#                                                                                      
+	#                       Oracle Default User and Password Sc4nner  
+	#                       By : Gavin
+	#                       reBuild by NOVASEC  WINZERO 
 	####################################################################
 	Usage:
 		python OracleDefault.py -t [target] 
 	Option:
-		-d [database] The Database which you Want to connect Oracle(orcl).
-		-p [port]	 Oracle service port,Default number is 1521.
+		-d [database] The Database which you Want to connect Oracl0. default(orcl).
+		-p [port]	 Oracle service port . Default(1521)
+		-f [userpwd file]     The user passwd dict file. default('oracle-userpwd-default.txt')
 	--------------------------------------------------------------------
 	Warn:
 		target	 -->  Must be IP.example:192.168.1.x .
@@ -41,7 +42,7 @@ def Usage():
 	sys.exit()
 
 def oraclelogin(target,user,password,database,port):
-	print("[+] Trying Default User and Password (%s----->%s)" % (user,password))
+	#print("[+] Trying Default User and Password (%s----->%s)" % (user,password))
 	try:
 		conn = cx_Oracle.connect(user,password,cx_Oracle.makedsn(target,port,database))
 		conn.close()
@@ -49,18 +50,18 @@ def oraclelogin(target,user,password,database,port):
 	except Exception as e:
 		#print(e)
 		if "ORA-12505" in str(e) : 
-			print('*** Errod SID or server_name!!!')
+			print('Errod SID or server_name!!! :',database)
 			sys.exit()
 			return (False,user,password)
 		elif "ORA-01017" in str(e) : 
-			print('*** Error Password!!!')
+			#print('Error Password!!!')
 			return (False,user,password)
 		elif "ORA-28000" in str(e) : 
-			print('***  The Account is Locked!!!')
+			print('The Account is Locked!!! : ',user)
 			return (False,user,password)
 		elif 'ORA-28009' in str(e) : 
 			try:
-				print('*** Test Oracle.SYSDBA')
+				print('Test Oracle.SYSDBA Account: ',user)
 				conn = cx_Oracle.connect(user,password,cx_Oracle.makedsn(target,port,database),cx_Oracle.SYSDBA)
 				conn.close()
 				return (True,user,password)

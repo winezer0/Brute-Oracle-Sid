@@ -22,17 +22,16 @@ def getFileType(file_path):
 	
 def Usage():
 	print('''
-	##################################################
-	#                                                                                                                      #
-	#                      Oracle Default User and Password Sc4nner                   #
-	#                                                  By : Gavin                                                  #
-	#                                     reBuild by WINZERO                                            #
-	##################################################
+	####################################################################
+	#                                                                                      
+	#                       Oracle Sid 
+	#                       reBuild by NOVASEC  WINZERO 
+	####################################################################
 	Usage:
 		python OracleDefault.py -t [target] 
 	Option:
-		-f  [sid file]     The Database dict file
-		-p [port]	 Oracle service port,Default number is 1521.
+		-f [sid file]    The sid dict file. default('oracle-brute-sid.txt')
+		-p [port]	 Oracle service port . Default(1521)
 	--------------------------------------------------------------------
 	Warn:
 		target	 -->  Must be IP.example:192.168.1.x .
@@ -45,22 +44,22 @@ def oraclelogin(target,user,password,database,port):
 	try:
 		conn = cx_Oracle.connect(user,password,cx_Oracle.makedsn(target,port,database))
 		conn.close()
-		#print('*** SID or server_name Be Found!!!')
+		#print('SID or server_name Be Found!!!')
 		return (True,database)
 	except Exception as e:
 		#print(e)
 		if "ORA-12505" in str(e) : 
-			#print('*** Errod SID or server_name!!!')
+			#print('Errod SID or server_name!!!')
 			return (False,database)
 		if "ORA-12504" in str(e) : 
-			#print('*** Errod SID or server_name!!!')
+			#print('Errod SID or server_name!!!')
 			return (False,database)
 		if "ORA-12514" in str(e) : 
-			#print('*** Errod SID or server_name!!!')
+			#print('Errod SID or server_name!!!')
 			return (False,database)
 		else:
-			print(e)
-			print('*** SID or server_name  Like Be Found!!!')
+			#print(e)
+			print('SID or server_name  Like Be Found!!!')
 			return (True,database)
 			
 def main():
@@ -103,7 +102,7 @@ def main():
 	with open(sidfile , mode='r' ,encoding=fileType ) as f:
 		data= [ i.strip() for i in f.readlines()]
 		data = list(set(data))
-		print(data)
+		#print(data)
 	data_count = len(data)
 	print("\r----------------------------------------------------")
 	print("\r[+] The number of Default dict is:%s" % data_count)
@@ -115,7 +114,7 @@ def main():
 		for i in data:
 			database = i.split(',')[0]
 			flag = oraclelogin(target,user,password,database,port)
-			print(flag)
+			#print(flag)
 			if flag[0] == True:
 				resault.append(flag[1])
 			data_count = data_count - 1	
