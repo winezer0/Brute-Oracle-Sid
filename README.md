@@ -16,7 +16,7 @@ oracle-userpwd-default.txt 默认用户名密码字典
 
 ####################################################################
 
-#Oracle SID爆破脚本使用使用：
+#Oracle SID爆破脚本使用：
 
 python3 oracle-brute-sid.py
 
@@ -43,7 +43,7 @@ Option:
 
 ####################################################################
 
-#Oracle默认口令爆破脚本使用方法：
+#Oracle默认口令爆破脚本使用：
 
 python3 oracle-brute-userpwd.py 
 
