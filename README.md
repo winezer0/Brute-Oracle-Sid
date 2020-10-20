@@ -2,7 +2,7 @@
 
 Simple Oracle sid and user Brute Python Script
 
-简单的python3 Oracle sid 爆破 及 默认用户名爆破脚本
+python3的简单Oracle SID爆破及默认用户名爆破脚本
 
 oracle-brute-sid.py 简单的Oracle SID爆破脚本 
 
