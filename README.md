@@ -12,6 +12,7 @@ oracle-brute-userpwd.py 简单的Oracle SID爆破脚本
 
 oracle-userpwd-default.txt 默认用户名密码字典
 
+参考：基于OracleDefault.py
 ####################################################################
 
 #Oracle SID爆破脚本使用使用：
@@ -81,5 +82,7 @@ instantclient下载地址：（建议安装与服务器端Oracle版本相近的�
 https://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html
 
 ####################################################################
+
+
 
         
