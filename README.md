@@ -31,12 +31,6 @@ Option:
         
 --------------------------------------------------------------------
 
-Warn:
-
-        target   -->  Must be IP.example:192.168.1.x .
-        
---------------------------------------------------------------------
-
 λ python3 oracle-brute-sid.py -t 192.168.88.88
 
 λ python3 oracle-brute-sid.py  -f oracle-brute-sid.txt -t 192.168.88.88
@@ -58,12 +52,9 @@ Option:
         -p [port]        Oracle service port . Default(1521)
         
         -f [userpwd file]     The user passwd dict file. default('oracle-userpwd-default.txt')
-        
+
 --------------------------------------------------------------------
-Warn:
-        target   -->  Must be IP.example:192.168.1.x .
-        
---------------------------------------------------------------------
+
 λ python3 oracle-brute-userpwd.py  -t 192.168.88.88
 
 λ python3 oracle-brute-userpwd.py  -t 192.168.88.88 -f oracle-userpwd-default.txt 
