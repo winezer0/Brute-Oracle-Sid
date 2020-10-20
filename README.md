@@ -2,6 +2,8 @@
 
 Simple Oracle sid and user Brute Python Script
 
+简单的python3 Oracle sid 爆破 及 默认用户名爆破脚本
+
 oracle-brute-sid.py 简单的Oracle SID爆破脚本 
 
 oracle-brute-sid.txt 默认sid字典
@@ -37,6 +39,8 @@ Option:
 
 λ python3 oracle-brute-sid.py -p 1521 -f oracle-brute-sid.txt -t 192.168.88.88
 
+####################################################################
+
 #Oracle默认口令爆破脚本使用方法：
 
 python3 oracle-brute-userpwd.py 
@@ -60,6 +64,7 @@ Option:
 λ python3 oracle-brute-userpwd.py  -t 192.168.88.88 -f oracle-userpwd-default.txt 
 
 λ python3 oracle-brute-userpwd.py  -t 192.168.88.88 -p 1521 -f oracle-userpwd-default.txt  
+
 
 ####################################################################
 
