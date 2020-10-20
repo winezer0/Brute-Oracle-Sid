@@ -43,10 +43,6 @@ Warn:
 
 λ python3 oracle-brute-sid.py -p 1521 -f oracle-brute-sid.txt -t 192.168.88.88
 
-####################################################################
-
-####################################################################
-
 #Oracle默认口令爆破脚本使用方法：
 
 python3 oracle-brute-userpwd.py 
@@ -66,8 +62,8 @@ Option:
 --------------------------------------------------------------------
 Warn:
         target   -->  Must be IP.example:192.168.1.x .
+        
 --------------------------------------------------------------------
-
 λ python3 oracle-brute-userpwd.py  -t 192.168.88.88
 
 λ python3 oracle-brute-userpwd.py  -t 192.168.88.88 -f oracle-userpwd-default.txt 
