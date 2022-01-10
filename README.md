@@ -8,6 +8,12 @@ oracle-brute-sid.py 简单的Oracle SID爆破脚本
 
 oracle-brute-sid.txt 默认sid字典
 
+
+
+实战记录：sid可能使用ora10、 orcl(默认)、 ris（系统名)等多种格式，一般是五位字符以下。
+
+
+
 ####################################################################
 
 oracle-brute-userpwd.py 简单的Oracle默认口令爆破脚本 
