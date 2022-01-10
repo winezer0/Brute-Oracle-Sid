@@ -8,7 +8,9 @@ oracle-brute-sid.py 简单的Oracle SID爆破脚本
 
 oracle-brute-sid.txt 默认sid字典
 
-oracle-brute-userpwd.py 简单的Oracle SID爆破脚本 
+####################################################################
+
+oracle-brute-userpwd.py 简单的Oracle默认口令爆破脚本 
 
 oracle-userpwd-default.txt 默认用户名密码字典
 
@@ -70,7 +72,8 @@ Option:
 
 ####################################################################
 
-报错说明：
+
+报错记录:
 
 DPI-1047: Cannot locate a 64-bit Oracle Client library: "The specified module could not be found". 
 
