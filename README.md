@@ -1,4 +1,4 @@
-# Oracle_Brute python3
+# Oracle-Sid-Brute python3
 
 Simple Oracle sid and user Brute Python Script
 
