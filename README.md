@@ -87,7 +87,7 @@ DPI-1047: Cannot locate a 64-bit Oracle Client library: "The specified module co
 
 windows下需要将instantclient所在目录加入到PATH环境变量，或将脚本置于目录下运行
 
-instantclient下载地址：（建议安装与服务器端Oracle版本相近的版本，本次测试使用19.8版本）
+instantclient下载地址：（建议安装与服务器端Oracle版本相近的版本，本次测试使用19.8版本,文件75MB，无法直接上传）
 
 https://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html
 
