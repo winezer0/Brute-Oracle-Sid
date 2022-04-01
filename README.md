@@ -2,6 +2,13 @@
 
 
 
+## 预看
+
+Oracle登陆状态码研究及代码实现
+https://mp.weixin.qq.com/s/kA2so6I8aGLOAvSm8ZFfQg
+
+
+
 ## 依赖
 
 ```
