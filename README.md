@@ -2,6 +2,7 @@
 
 
 
+<<<<<<< HEAD
 ## 预看
 
 Oracle登陆状态码研究及代码实现
@@ -9,10 +10,18 @@ https://mp.weixin.qq.com/s/kA2so6I8aGLOAvSm8ZFfQg
 
 
 
+
+
+=======
+>>>>>>> parent of 16feb3d (Update README.md)
 ## 依赖
 
 ```
-程序依赖instantclient
+pip3 install cx_Oracle
+
+注意事项：
+cx_Oracle 依赖instantclient中的dll文件
+项目下已附带instantclient-19-8中的所有dll，将dll文件复制到python3/Lib/site-packages目录下即可
 
 下载地址：
 https://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html
@@ -21,8 +30,15 @@ https://www.oracle.com/technetwork/database/database-technologies/instant-client
 报错记录:
 DPI-1047: Cannot locate a 64-bit Oracle Client library: "The specified module could not be found". 
 
-解决方案：
-windows下需要将instantclient所在目录加入到PATH环境变量，或将脚本置于目录下运行
+解决方案1：
+windows下需要将instantclient所在目录加入到PATH环境变量。
+
+解决方案2：
+解压instant-client,将其下所有dll文件复制到python3/Lib/site-packages目录下面
+
+详情参考:
+https://blog.csdn.net/wangyajun469172/article/details/100017946
+
 ```
 
 ## Brute-Oracle-Sid.py  Oracle SID爆破Demo 
