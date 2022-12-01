@@ -1,19 +1,9 @@
 # 准确爆破 Oracle 数据库
 
 
-
-<<<<<<< HEAD
-## 预看
-
 Oracle登陆状态码研究及代码实现
 https://mp.weixin.qq.com/s/kA2so6I8aGLOAvSm8ZFfQg
 
-
-
-
-
-=======
->>>>>>> parent of 16feb3d (Update README.md)
 ## 依赖
 
 ```
